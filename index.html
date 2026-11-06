@@ -10,7 +10,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="styles.css" />
-    <script src="app.js" defer></script>
   </head>
   <body>
     <header class="site-header">
@@ -58,16 +57,21 @@
         </form>
       </section>
 
+      <!-- KHU VỰC HIỂN THỊ KẾT QUẢ ĐÃ ĐƯỢC THÊM ID -->
       <section class="result-panel" aria-labelledby="result-heading">
         <div class="section-heading">
           <span class="step-number muted-step">02</span>
           <div><h2 id="result-heading">Kết quả tra cứu</h2><p>Thông tin hồ sơ và lệ phí sát hạch.</p></div>
         </div>
-        <div class="empty-state" id="empty-state">
-          <div class="empty-icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none"><rect x="7" y="7" width="13" height="13" rx="2"/><rect x="28" y="7" width="13" height="13" rx="2"/><rect x="7" y="28" width="13" height="13" rx="2"/><path d="M29 28h5v5h-5zm8 0h4m-12 9h5m4-4v8m4-6h-4"/></svg></div>
-          <h3>Hồ sơ sẽ hiển thị tại đây</h3>
-          <p>Nhập số căn cước ở trên để bắt đầu tra cứu.</p>
+        
+        <div id="result-container">
+          <div class="empty-state" id="empty-state">
+            <div class="empty-icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none"><rect x="7" y="7" width="13" height="13" rx="2"/><rect x="28" y="7" width="13" height="13" rx="2"/><rect x="7" y="28" width="13" height="13" rx="2"/><path d="M29 28h5v5h-5zm8 0h4m-12 9h5m4-4v8m4-6h-4"/></svg></div>
+            <h3>Hồ sơ sẽ hiển thị tại đây</h3>
+            <p>Nhập số căn cước ở trên để bắt đầu tra cứu.</p>
+          </div>
         </div>
+
         <div class="connection-note"><span aria-hidden="true">i</span><p>Hệ thống đang ở chế độ giao diện mới. Dữ liệu hồ sơ và QR thanh toán sẽ được bật sau khi kết nối nguồn dữ liệu chính thức.</p></div>
       </section>
 
@@ -81,6 +85,10 @@
       </section>
       <footer><span>© 2026 · Cổng thông tin thí sinh</span><a href="mailto:hotro@example.com">Cần hỗ trợ?</a></footer>
     </main>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
-</body>
+
+    <!-- Thư viện SheetJS đọc Excel -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+    <!-- File xử lý logic -->
+    <script src="app.js"></script>
+  </body>
 </html>
